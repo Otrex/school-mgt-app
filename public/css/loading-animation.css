@@ -1,0 +1,58 @@
+/*
+    Credits to @stackfindover. Check him out on dev.to:
+    https://dev.to/stackfindover/youtube-loading-animation-using-html-and-css-44c2
+*/
+.cardss {
+    background: #fff;
+    height: auto;
+    width: auto;
+    overflow: hidden;
+}
+.card_image {
+    width: 100%;
+    height: 100%;
+}
+.card_image.loading {
+    width: 100%;
+    height: 180px;
+}
+.card_title {
+    padding: 8px;
+    font-size: 22px;
+    font-weight: 700;
+}
+.card_title.loading {
+    width: 50%;
+    height: 1rem;
+    margin: 1rem;
+    border-radius: 3px;
+    position: relative;
+}
+.card_description {
+    padding: 8px;
+    font-size: 16px;
+}
+.card_description.loading {
+    margin: 0;
+    border-radius: 3px;
+}
+.loading {
+    position: relative;
+    background: #cccccc;
+}
+.loading:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-100px);
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    animation: loading 0.8s infinite;
+}
+@keyframes loading {
+    100% {
+        transform: translateX(100%);
+    }
+}
